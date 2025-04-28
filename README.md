@@ -1,6 +1,6 @@
 # 🩸 BloodPrint
 
-**BloodPrint** is a web-based application that detects a user's blood group using fingerprint scanning technology. This innovative project aims to revolutionize how blood group detection is performed — making it quick, contactless, and accessible ..
+**BloodPrint** is a web-based application that detects a user's blood group using fingerprint scanning technology. This innovative project aims to revolutionize how blood group detection is performed — making it quick, contactless, and accessible
 
 ---
 
