@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.png'
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { IoEllipseSharp } from 'react-icons/io5';
 
 
 const Navbar = ({ handleAuthOpen }) => {
@@ -19,6 +20,18 @@ const Navbar = ({ handleAuthOpen }) => {
 
   const handleToggle = () => {
     setShowMenu(!showMenu);
+  }
+
+  const navigate = useNavigate();
+  function  handleHomeClick(){
+    if(location.pathname !== '/'){
+      navigate('/');
+    }else{
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
   }
 
   return (
@@ -58,7 +71,13 @@ const Navbar = ({ handleAuthOpen }) => {
                     >
                       {item.fieldName}
                     </button>
-                  ) : (<Link to={item.link} className="text-lg text-amber-50 font-semibold">{item.fieldName}</Link>)}</li>
+                  ) : item.fieldName === "Home" ? (
+                    <button 
+                     onClick = {handleHomeClick}
+                     className="text-lg text-amber-50 font-semibold cursor-pointer">
+                      {item.fieldName}
+                    </button>
+                  ): (<Link to={item.link} className="text-lg text-amber-50 font-semibold">{item.fieldName}</Link>)}</li>
               ))}
             </ul>
           </nav>
