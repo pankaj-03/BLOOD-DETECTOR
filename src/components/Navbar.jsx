@@ -1,25 +1,28 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo_image.png'
+import logo from '../assets/logo.png'
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+
+const Navbar = ({ handleAuthOpen }) => {
 
   const NavFields = [
-    { id: 0, fieldName: "Home", link: "#" },
-    { id: 1, fieldName: "About", link: "#" },
+    { id: 0, fieldName: "Home", link: "/" },
+    { id: 1, fieldName: "About", link: "/about" },
     { id: 2, fieldName: "Services", link: "#" },
     { id: 3, fieldName: "Contact", link: "#" },
     { id: 4, fieldName: "Login", link: "#" },
     { id: 5, fieldName: "SignUp", link: "#" },
   ]
-
+  
   const [showMenu, setShowMenu] = useState(false);
 
   const handleToggle = () => {
     setShowMenu(!showMenu);
   }
+
   return (
-    <header className="w-full h-28  sticky top-0  z-50 bg-gradient-to-b from-red-950 to-red-500 md:h-32 shadow-xl">
+    <header className="w-full h-28  sticky top-0  z-50 bg-gradient-to-b from-[#3e0d0d] to-[#801818] md:h-32 shadow-xl">
       <div className="container max-w-full mx-auto  px-6">
         <div className="grid navbar-grid grid-cols-2">
 
@@ -40,7 +43,22 @@ const Navbar = () => {
             <ul className={`absolute top-25 left-0 w-full md:static md:flex md:flex-row md:justify-center items-center lg:gap-6 md:gap-3  flex-col md:h-full md:bg-transparent  space-y-2 md:space-y-0  bg-red-400 ${showMenu ? "flex" : "hidden"}`}>
               {NavFields.map((item) => (
                 <li key={item.id} className={`${item.id === 0 ? "mt-2" : " "} ${item.id === NavFields.length - 1 ? "mb-2" : ""} md:mt-0 md:mb-0`}>
-                  <a href={item.link} className="text-lg text-amber-50 font-semibold">{item.fieldName}</a></li>
+                  
+                  {item.fieldName === "Login" ? (
+                    <button
+                      onClick={() => handleAuthOpen(true)}
+                      className="text-lg text-amber-50 font-semibold"
+                    >
+                      {item.fieldName}
+                    </button>
+                  ) : item.fieldName === "SignUp" ? (
+                    <button
+                      onClick={() => handleAuthOpen(false)}
+                      className="text-lg text-amber-50 font-semibold"
+                    >
+                      {item.fieldName}
+                    </button>
+                  ) : (<Link to={item.link} className="text-lg text-amber-50 font-semibold">{item.fieldName}</Link>)}</li>
               ))}
             </ul>
           </nav>
