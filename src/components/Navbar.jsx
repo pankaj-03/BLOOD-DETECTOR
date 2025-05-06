@@ -5,15 +5,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import { IoEllipseSharp } from 'react-icons/io5';
 
 
-const Navbar = ({ handleAuthOpen }) => {
+const Navbar = () => {
 
   const NavFields = [
     { id: 0, fieldName: "Home", link: "/" },
-    { id: 1, fieldName: "About", link: "/about" },
+    { id: 1, fieldName: "About Us", link: "/about" },
     { id: 2, fieldName: "Services", link: "#" },
-    { id: 3, fieldName: "Contact", link: "#" },
-    { id: 4, fieldName: "Login", link: "#" },
-    { id: 5, fieldName: "SignUp", link: "#" },
+    { id: 3, fieldName: "Results", link: "#" },
+    // { id: 4, fieldName: "Login", link: "#" },
+    // { id: 5, fieldName: "SignUp", link: "#" },
   ]
   
   const [showMenu, setShowMenu] = useState(false);
@@ -57,21 +57,7 @@ const Navbar = ({ handleAuthOpen }) => {
               {NavFields.map((item) => (
                 <li key={item.id} className={`${item.id === 0 ? "mt-2" : " "} ${item.id === NavFields.length - 1 ? "mb-2" : ""} md:mt-0 md:mb-0`}>
                   
-                  {item.fieldName === "Login" ? (
-                    <button
-                      onClick={() => handleAuthOpen(true)}
-                      className="text-lg text-amber-50 font-semibold"
-                    >
-                      {item.fieldName}
-                    </button>
-                  ) : item.fieldName === "SignUp" ? (
-                    <button
-                      onClick={() => handleAuthOpen(false)}
-                      className="text-lg text-amber-50 font-semibold"
-                    >
-                      {item.fieldName}
-                    </button>
-                  ) : item.fieldName === "Home" ? (
+                  {item.fieldName === "Home" ? (
                     <button 
                      onClick = {handleHomeClick}
                      className="text-lg text-amber-50 font-semibold cursor-pointer">
