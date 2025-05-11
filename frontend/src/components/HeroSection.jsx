@@ -126,18 +126,14 @@ const HeroSection = ({ handleAuthOpen }) => {
                                 <input type="file" onChange={handleFileChange} id="fileInput" className="hidden" />
                                 <button
                                     onClick={!selectedFile ? handleUploadClick : undefined} // do nothing if file is selected
-                                    className={`
-            px-8 py-3 font-semibold md:text-lg rounded-md text-md text-amber-50 transition-all duration-300
-            ${selectedFile ? 'bg-teal-700 cursor-default' : 'bg-red-700 cursor-pointer'}
-        `}
-                                >
+                                    className={`md:px-8 md:py-3 px-2 py-1 md:text-xl rounded-md text-base font-semibold text-amber-50 transition-all duration-300 ${selectedFile ? 'bg-teal-700 cursor-default' : 'bg-red-700 cursor-pointer'}`}>
                                     {selectedFile ? 'Fingerprint Selected' : 'Choose Fingerprint'}
                                 </button>
                             </div>
 
 
                             <div>
-                                <button onClick={handlePredict} className="px-8 py-3 font-semibold md:text-lg bg-green-700 rounded-md text-md text-amber-50 cursor-pointer">
+                                <button onClick={handlePredict} className="md:px-8 md:py-3 px-2 py-1 font-semibold md:text-xl text-base  bg-green-700 rounded-md text-md text-amber-50 cursor-pointer">
                                     Predict Blood Group
                                 </button>
                             </div>
