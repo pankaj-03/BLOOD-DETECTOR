@@ -11,7 +11,7 @@ const Navbar = () => {
     { id: 0, fieldName: "Home", link: "/" },
     { id: 1, fieldName: "About Us", link: "/about" },
     { id: 2, fieldName: "Services", link: "#" },
-    { id: 3, fieldName: "Results", link: "#" },
+    { id: 3, fieldName: "Results", link: "/result" },
     // { id: 4, fieldName: "Login", link: "#" },
     // { id: 5, fieldName: "SignUp", link: "#" },
   ]
@@ -60,7 +60,7 @@ const Navbar = () => {
                   {item.fieldName === "Home" ? (
                     <button 
                      onClick = {handleHomeClick}
-                     className="text-lg text-amber-50 font-semibold cursor-pointer">
+                     className="text-lg text-amber-50 font-semibold cursor-pointer hover:">
                       {item.fieldName}
                     </button>
                   ): (<Link to={item.link} className="text-lg text-amber-50 font-semibold">{item.fieldName}</Link>)}</li>

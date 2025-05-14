@@ -206,10 +206,10 @@ const HeroSection = ({ handleAuthOpen }) => {
                     <h2 className="md:text-xl text-md text-center mt-10 text-gray-600">Create an account now and start analysing fingerprints immediately</h2>
                     <div className='w-full grid md:grid-cols-2 grid-cols-1 md:gap-32 gap-6 mt-6'>
                         <div className="w-full col-span-1 flex justify-center md:justify-end">
-                            <button onClick={() => handleAuthOpen(false)} className='px-8 py-3 md:text-lg text-base font-semibold bg-red-700 text-white rounded hover:bg-red-600'>SignUp for free</button>
+                            <button onClick={() => handleAuthOpen(false)} className='px-8 py-3 md:text-lg text-base font-semibold bg-red-700 text-white rounded hover:bg-red-600 cursor-pointer'>SignUp for free</button>
                         </div>
                         <div className="w-full col-span-1 flex justify-center md:justify-start">
-                            <button onClick={() => handleAuthOpen(true)} className='px-8 py-3 md:text-lg text-base bg-black font-semibold text-white rounded hover:bg-gray-900'>Log In</button>
+                            <button onClick={() => handleAuthOpen(true)} className='px-8 py-3 md:text-lg text-base bg-black font-semibold text-white rounded hover:bg-gray-900 cursor-pointer'>Log In</button>
                         </div>
                     </div>
                 </div>

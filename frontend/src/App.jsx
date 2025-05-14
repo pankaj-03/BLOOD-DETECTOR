@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import Footer from './components/Footer'
 import About from './components/About'
+import Result from './components/Result';
 
 
 
@@ -21,12 +22,14 @@ function App() {
       <Navbar  />
       <Routes>
         <Route path="/" element={<HeroSection  />} />
-        <Route path="/about" element={<About />} />  {/* Add route for About */}
+        <Route path="/about" element={<About />} />  
+        <Route path="/result" element = {<Result/>}/>
       </Routes>
       <Footer />
-
   
     </BrowserRouter>
+
+  
 
     </>
   )
