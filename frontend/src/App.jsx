@@ -10,6 +10,7 @@ import Result from './components/Result';
 
 
 
+
 function App() {
   
   
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<HeroSection  />} />
         <Route path="/about" element={<About />} />  
         <Route path="/result" element = {<Result/>}/>
+        {/* <Route path="/docs" element = {<Docs/>}/> */}
       </Routes>
       <Footer />
   
