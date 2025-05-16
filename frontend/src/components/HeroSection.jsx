@@ -200,7 +200,7 @@ const HeroSection = ({ handleAuthOpen }) => {
             </section>
 
             {/* ready to give blood group */}
-            <div>
+            {/* <div>
                 <div className="bg-[url('/src/assets/background_image.png')] bg-cover bg-center h-auto p-3 flex flex-col w-full py-15">
                     <h1 className="md:text-5xl text-3xl text-center font-bold">Ready to try out our <span className="text-red-700">blood group</span> detection technology?</h1>
                     <h2 className="md:text-xl text-md text-center mt-10 text-gray-600">Create an account now and start analysing fingerprints immediately</h2>
@@ -213,7 +213,7 @@ const HeroSection = ({ handleAuthOpen }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 };
