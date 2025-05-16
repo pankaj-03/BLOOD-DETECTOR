@@ -10,7 +10,7 @@ const Navbar = () => {
   const NavFields = [
     { id: 0, fieldName: "Home", link: "/" },
     { id: 1, fieldName: "About Us", link: "/about" },
-    { id: 2, fieldName: "Docs", link: "https://github.com/pankaj-03/BLOOD-DETECTOR" },
+    { id: 2, fieldName: "Info", link: "https://github.com/pankaj-03/BLOOD-DETECTOR" },
     { id: 3, fieldName: "Results", link: "/result" },
     // { id: 4, fieldName: "Login", link: "#" },
     // { id: 5, fieldName: "SignUp", link: "#" },
